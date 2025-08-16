@@ -88,8 +88,10 @@ function addToCart(name, price, image) {
             <button onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
             <span>${item.quantity}</span>
             <button onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+             </div>
+              <button class="remove-btn" onclick="removeFromCart(${index})">Remover</button>
+            </div>
           </div>
-        </div>
       </div>
     `
   )
