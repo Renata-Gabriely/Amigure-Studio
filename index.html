@@ -52,6 +52,13 @@
         align-items: center;
         justify-content: center;
       }
+
+      .ver-mais a{
+        display: flex;
+        text-align: center;
+        color: hotpink;
+
+      }
     </style>
   </head>
   <body>
@@ -144,7 +151,7 @@
             makeUP, o lugar onde você encontrará tudo que precisa e muita mais.
           </p>
           <p class="plast">
-            Garanta já seu <a href="#kitgb">kit GB makeUP</a> e venha ser feliz!
+            Garanta já seu <a href="produtos.html">kit GB makeUP</a> e venha ser feliz!
           </p>
           <hr class="hr" />
         </div>
@@ -168,14 +175,14 @@
         <div class="container">
             <h1 style="text-align: center; color: #333; margin-bottom: 20px;">Produtos</h1>
             
-            <div class="products-grid">
+                 <div class="products-grid">
                 <!-- Produto 1 -->
                 <div class="product-card">
                     <div class="product-image"><img src="assets/img/base.png" height="450px"></div>
-                    <h3 class="product-title">Base para todos tipos de pele</h3>
+                    <h3 class="product-title">Base</h3>
                     <div class="product-price">R$ 20,00</div>
                     <div class="product-installments">2x R$ 10 (sem juros)</div>
-        <button  class="buy-button"  onclick="addToCart('Base', '20,00')">COMPRE</button>
+        <button  class="buy-button"  onclick="addToCart('Base', '20,00', 'assets/img/base.png')">COMPRE</button>
                 </div>
 
                 <!-- Produto 2 -->
@@ -184,7 +191,7 @@
                     <h3 class="product-title">Blush Compacto</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Blush Compacto', '18,00')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('Blush Compacto', '18,00', 'assets/img/blush.png')">COMPRE</button>
                 </div>
 
                 <!-- Produto 3 -->
@@ -193,7 +200,7 @@
                     <h3 class="product-title">Corretivo Líquido</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Corretivo', '18,00')">COMPRE</button>
+                    <button  class="buy-button"  onclick="addToCart('Corretivo', '18,00', 'assets/img/corretivo.png')">COMPRE</button>
                 </div>
 
                 <!-- Produto 4 -->
@@ -202,16 +209,16 @@
                     <h3 class="product-title">Caneta Delineadora</h3>
                     <div class="product-price">R$ 12,00</div>
                     <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                  <button  class="buy-button"  onclick="addToCart('Delineador', '12,00')">COMPRE</button>
+                  <button  class="buy-button"  onclick="addToCart('Delineador', '12,00', 'assets/img/delineador.png')">COMPRE</button>
                 </div>
 
                       <!-- Produto 5 -->
                 <div class="product-card">
                     <div class="product-image"><img src="assets/img/rimel.png" height="450px"></div>
-                    <h3 class="product-title">Kit Gel de Sobrancelha + tinta</h3>
+                    <h3 class="product-title">Kit Gel de Sobrancelha</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Kit Gel de Sobrancelha', '18,00')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('Kit Gel de Sobrancelha', '18,00', 'assets/img/rimel.png')">COMPRE</button>
                 </div>
 
                         <!-- Produto 6 -->
@@ -220,62 +227,10 @@
                     <h3 class="product-title">Rímel Volume Máximo</h3>
                     <div class="product-price">R$ 14,00</div>
                     <div class="product-installments">2x R$ 7,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Rímel', '14,00')">COMPRE</button>
+                    <button  class="buy-button"  onclick="addToCart('Rímel', '14,00', 'assets/img/rimel2.png')">COMPRE</button>
                 </div>
 
-                     <!-- Produto 7 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/gloss.png" height="350px"></div>
-                    <h3 class="product-title">Gloss</h3>
-                    <div class="product-price">R$ 12,00</div>
-                    <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                  <button  class="buy-button"  onclick="addToCart('Gloss Incolor', '12,00')">COMPRE</button>
-                </div>
-
-                      <!-- Produto 8 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/hidratante.png" height="380px"></div>
-                    <h3 class="product-title">Contorno em Stick</h3>
-                    <div class="product-price">R$ 15,00</div>
-                    <div class="product-installments">2x R$ 7,50 (sem juros)</div>
-                 <button  class="buy-button"  onclick="addToCart('Contorno', '15,00')">COMPRE</button>
-                </div>
-
-                        <!-- Produto 9 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/hidratanteLabial2.png" height="450px"></div>
-                    <h3 class="product-title">Blush em Stick</h3>
-                    <div class="product-price">R$ 12</div>
-                    <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                   <button  class="buy-button"  onclick="addToCart('Blush Stick', '12,00')">COMPRE</button>
-                </div>
-
-                     <!-- Produto 10 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/po.png" height="350px"></div>
-                    <h3 class="product-title">Pó Solto</h3>
-                    <div class="product-price">R$ 20,00</div>
-                    <div class="product-installments">2x R$ 10,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Pó solto', '20,00')">COMPRE</button>
-                </div>
-
-                      <!-- Produto 11 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/pinceis.png" height="420px"></div>
-                    <h3 class="product-title">Kit 7 Pincéis</h3>
-                    <div class="product-price">R$ 28,90</div>
-                    <div class="product-installments">3x R$ 9,64 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Kit 7 pincéis', '28,90')">COMPRE</button>
-                </div>
-
-                        <!-- Produto 12 -->
-                <div class="product-card">
-                    <div class="product-image"><img src="assets/img/esponjas.png" height="450px"></div>
-                    <h3 class="product-title">Kit 3 Esponjas</h3>
-                    <div class="product-price">R$ 32,90</div>
-                    <div class="product-installments">3x R$ 10,97 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Kit e esponjas', '32,90')">COMPRE</button>
-                </div>
+                <h3 class="ver-mais"><a href="produtos.html">VEJA MAIS...</a></h3>
             </div>
         </div>
     </main>

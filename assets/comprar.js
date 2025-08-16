@@ -21,21 +21,24 @@
   };
 
   // ==== Ações do carrinho ====
-  function addToCart(name, price) {
-    const p = toNumber(price);
-    if (Number.isNaN(p)) {
-      console.warn('Preço inválido:', price, 'para o item:', name);
-      return;
-    }
-    const existing = cart.find((i) => i.name === name);
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      cart.push({ name, price: p, quantity: 1 });
-    }
-    updateCartUI();
-    showAddedToCartAnimation();
+function addToCart(name, price, image) {
+  const p = toNumber(price);
+  const existing = cart.find((i) => i.name === name);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name,
+      price: p,
+      quantity: 1,
+      image: image // 👉 guarda a imagem
+    });
   }
+
+  updateCartUI();
+  showAddedToCartAnimation();
+}
 
   function removeFromCart(index) {
     if (index >= 0 && index < cart.length) {
@@ -71,25 +74,27 @@
         </div>
       `;
     } else {
-      els.items.innerHTML = cart
-        .map(
-          (item, index) => `
-          <div class="cart-item">
-            <div class="cart-item-image">IMG</div>
-            <div class="cart-item-info">
-              <div class="cart-item-name">${item.name}</div>
-              <div class="cart-item-price">${brl(item.price)}</div>
-              <div class="quantity-controls">
-                <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
-                <span class="quantity">${item.quantity}</span>
-                <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
-              </div>
-              <button class="remove-btn" onclick="removeFromCart(${index})">Remover</button>
-            </div>
+      cartItems.innerHTML = cart
+  .map(
+    (item, index) => `
+      <div class="cart-item">
+        <div class="cart-item-image">
+          <img src="${item.image}" alt="${item.name}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;" />
+        </div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">${brl(item.price)}</div>
+          <div class="quantity-controls">
+            <button onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+            <span>${item.quantity}</span>
+            <button onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
           </div>
-        `
-        )
-        .join('');
+        </div>
+      </div>
+    `
+  )
+  .join('');
+
     }
 
     // Total
