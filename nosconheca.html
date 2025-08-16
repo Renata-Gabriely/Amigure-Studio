@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GB Criadoras</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         .custumizar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .acordion {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .acordion-header {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 16px;
+    }
+
+    .acordion-header span {
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: bold;
+    }
+
+    .acordion-body {
+      font-size: 14px;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+      padding: 0 16px;
+    }
+
+    .acordion.active .acordion-body {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 16px;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .acordion.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    strong#rosa {
+      color: #b3005f;
+    }
+
+    
+      .cart-icon {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        min-width: 40px;
+        text-align: center;
+        margin-top: 8%;
+      }
+
+          .cart-icon:hover {
+      background-color: rgb(255, 0, 128);
+      }
+
+      .cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+         background-color: rgba(248, 91, 170, 0.633);
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  </style>
+     
+  </head>
+  <body>
+    <div class="div-grid-conheca">
+     <header class="cabecalho">
+      <div class="grid-de-cabecalho">
+        <div class="div-header">
+          <ul>
+            <!-- Carrinho corrigido -->
+            <li>
+              <a href="javascript:void(0)" class="cart-icon" onclick="openCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="login-button"
+                ><i class="fa fa-user"></i> Conecte-se</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="div1"><h1>GB</h1></div>
+        <div class="div2"><h2>make UP</h2></div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="produtos.html">PRODUTOS</a></li>
+            <li><a href="contatos.html" class="estou-aqui">CONTATOS</a></li>
+            <li><a href="./nosconheca.html">QUEM SOMOS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+      <aside class="conheca">
+        
+      </aside>
+
+        <div class="single-property section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="main-content">
+              <span class="category">Viçosa, Alagoas</span>
+              <h4>GB makeUP</h4>
+              <p>
+                Olá, bem-vindos ao nosso site! 
+                <br>
+              Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua.<br> Ut enin ad ninin venian, quis nostrun exercitationen ullan corporis suscipit laboriosan, nisi ut aliquid ex ea connodi consequatur. <br>Quis aute iure reprehenderit in voluptate velit esse cillun dolore eu fugiat nulla pariatur. <br>Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt nollit anin id est laborun.
+              </p>
+            </div>
+            </div>
+
+<div class="custumizar">
+  <div class="acordion">
+    <button class="acordion-header">
+      <span>QUEM SOMOS NÓS?</span>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+    </button>
+    <div class="acordion-body">
+      <p>
+        A marca GB makeUP foi criada por
+        <strong id="rosa">Renata Gabriely e Bruna Elias</strong>,
+        profissionais na área da cosmetologia.
+      </p>
+    </div>
+  </div>
+
+  <div class="acordion">
+    <button class="acordion-header">
+      <span>COMO A GB MAKEUP SURGIU?</span>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+    </button>
+    <div class="acordion-body">
+      <p>
+        A marca GB makeUP foi criada por
+        <strong id="rosa">Renata Gabriely e Bruna Elias</strong>.
+      </p>
+      <p>
+        <strong id="rosa">Nossos produtos não são testados em animais</strong>.
+      </p>
+    </div>
+  </div>
+
+  <div class="acordion">
+    <button class="acordion-header">
+      <span>VALE A PENA COMPRAR NOSSOS PRODUTOS?</span>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+    </button>
+    <div class="acordion-body">
+      <p>
+        <strong>O que você prefere, gastar muito em uma maquiagem boa, ou gastar pouco com uma maquiagem ainda melhor?</strong>
+      </p>
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+   </div>
+
+    <div class="make">
+              <ul>
+                <li>
+                  <h3>Cartificado de conclusâo do curso de cosmetologia</h4>
+                </li>
+                <li>
+                <div class="pdf-container">
+    <h5>Certificado de Renata Gabriely</h5>
+    <iframe src="assets/pdf/Certificado-Evento-CSBC.pdf"></iframe>
+    <a href="assets/pdf/Certificado-Evento-CSBC.pdf" class="link-pdf" download>Baixar PDF</a>
+  </div>
+                </li>
+                <li>
+                   <div class="pdf-container">
+    <h5>Certificado de Bruna Elias</h5>
+    <iframe src="assets/pdf/Monitoria_4.0.pdf"></iframe>
+    <a href="assets/pdf/Monitoria_4.0.pdf" class="link-pdf" download>Baixar PDF</a>
+  </div>
+              </ul>
+        </div>
+
+
+
+
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SOBRE NÓS</h3>
+        <p>
+            A marca GB makeUP foi criada por<br>
+            <strong id="rosa">Renata Gabriely e Bruna Elias,</strong><br>
+            profissionais na área da cosmetologia.<br> a idéia inicial era fabricar
+            produtos de alta qualidade<br> e com preços acessíveis, ao mesmo tempo
+            que não machucasse<br> ou danificasse a pele, principalmente quando as<br>
+            peles sensíveis entram no assuno.
+          </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>LINKS</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Promoção</a></li>
+          <li><a href="#">Sobre nós</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>SUPORTE</h3>
+        <ul>
+          <li><a href="#">Perguntas</a></li>
+          <li><a href="#">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>COPYRIGHT © 2023 <span>ELAVENTA</span> | ELAVENTA BY <span>CATCH THEMES</span></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/_gabrielyy8/?igsh=MW4ydHVkNnQ5N215bA%3D%3D#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+    </div>
+      <script>
+  const headers = document.querySelectorAll('.acordion-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const acordion = header.closest('.acordion');
+      acordion.classList.toggle('active');
+    });
+  });
+</script>
+  </body>
+</html>
