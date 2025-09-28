@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GB makeUP</title>
+    <title>Amigurê Studio</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./assets/script.js" defer></script>
-    <script src="assets/comprar.js"></script>
     <link rel="stylesheet" href="assets/responsivo.css">
     <style>
       .preco-desconto h4 {
@@ -20,7 +19,7 @@
       }
 
       button {
-        background-color: hotpink;
+        background-color: rgb(255, 193, 148);
       }
 
       .cart-icon {
@@ -36,15 +35,15 @@
       }
 
           .cart-icon:hover {
-      background-color: rgb(255, 0, 128);
+      background-color: rgb(255, 173, 114);
       }
 
       .cart-count {
         position: absolute;
         top: -5px;
         right: -5px;
-        background-color: rgba(248, 91, 170, 0.633);
-        color: white;
+        background-color: rgb(247, 222, 204);
+        color: rgb(41, 41, 41);
         border-radius: 50%;
         width: 20px;
         height: 20px;
@@ -57,7 +56,7 @@
       .ver-mais a{
         display: flex;
         text-align: center;
-        color: hotpink;
+        color: rgb(247, 222, 204);
 
       }
 
@@ -86,8 +85,7 @@
           </ul>
         </div>
 
-        <div class="div1"><h1>GB</h1></div>
-        <div class="div2"><h2>make UP</h2></div>
+        <div class="div1"><img src="assets/img/logo.png" height="300px"> </div>
 
         <div class="menu">
           <ul>
@@ -106,12 +104,12 @@
           <input type="radio" name="btn-radio" id="radio3" />
 
           <div class="slide-container primeiro">
-            <img class="img" src="./assets/img/fundo.jpg" alt="slide1" />
+            <img class="img" src="./assets/img/fundo3.2.png" alt="slide1" />
             <img class="img-mobile" src="./img/fundo_mibile.jpg" alt="slide1" />
           </div>
 
           <div class="slide-container">
-            <img class="img" src="./assets/img/fundo2.jpg" alt="slide2" />
+            <img class="img" src="./assets/img/unnamed.png" alt="slide2" />
             <img
               class="img-mobile"
               src="./assets/img/fundo2_mobile.jpg"
@@ -120,7 +118,7 @@
           </div>
 
           <div class="slide-container">
-            <img class="img" src="./assets/img/fundo3.jpg" alt="slide3" />
+            <img class="img" src="./assets/img/slide1.png" alt="slide3" />
             <img
               class="img-mobile"
               src="./assets/img/fundo3_mobile.jpg"
@@ -144,17 +142,18 @@
       <main class="main1">
         <div>
           <hr class="hr" />
-          <h2>GB makeUP</h2>
+          <h2>Amigurê Studio</h2>
           <br />
           <h3>
-            Está procurando produtos de alta qualidade com preços acessíveis?
+            Chaveiro únicos aqui!
           </h3>
           <p>
-            Então você achou o lugar certo!! Bem vindo ao site Oficcial da GB
-            makeUP, o lugar onde você encontrará tudo que precisa e muita mais.
+        💚 Feitos à mão – cada peça é única, criada com amor e atenção aos mínimos detalhes.<br>
+🌱 Materiais de qualidade – usamos fios macios e resistentes para garantir beleza e durabilidade.<br>
+🎁 Presentes cheios de afeto – opções criativas para surpreender quem você ama.<br>
           </p>
           <p class="plast">
-            Garanta já seu <a href="produtos.html">kit GB makeUP</a> e venha ser feliz!
+      Escolha o seu modelo favorito e leve um pedacinho do nosso mundo de crochê para onde você for!
           </p>
           <hr class="hr" />
         </div>
@@ -181,56 +180,56 @@
                  <div class="products-grid">
                 <!-- Produto 1 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/base.png" height="450px"></div>
-                    <h3 class="product-title">Base</h3>
+                    <div class="product-image"><img src="assets/img/Senhora-Aparecida.jpg" height="250px"></div>
+                    <h3 class="product-title">Nossa Senhora Aparecid</h3>
                     <div class="product-price">R$ 20,00</div>
                     <div class="product-installments">2x R$ 10 (sem juros)</div>
-        <button  class="buy-button"  onclick="addToCart('Base', '20,00', 'assets/img/base.png')">COMPRE</button>
+        <button  class="buy-button"  onclick="addToCart('Nossa Senhora Aparecida', '20,00', 'assets/img/Senhora-Aparecida.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 2 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/blush.png" height="410px"></div>
-                    <h3 class="product-title">Blush Compacto</h3>
+                    <div class="product-image"><img src="assets/img/sao-carlos-acutis.jpg" height="250px"></div>
+                    <h3 class="product-title">São Carlos Acutis</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Blush Compacto', '18,00', 'assets/img/blush.png')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('São Carlos Acutis', '18,00', 'assets/img/sao-carlos-acutis.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 3 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/corretivo.png" height="410px"></div>
-                    <h3 class="product-title">Corretivo Líquido</h3>
-                    <div class="product-price">R$ 18,00</div>
-                    <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Corretivo', '18,00', 'assets/img/corretivo.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/ursinha.jpg" height="250px"></div>
+                    <h3 class="product-title">Ursinha</h3>
+                    <div class="product-price">R$ 20,00</div>
+                    <div class="product-installments">2x R$ 10,00 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Ursinha', '20,00', 'assets/img/ursinha.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 4 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/delineador.png" height="350px"></div>
-                    <h3 class="product-title">Caneta Delineadora</h3>
+                    <div class="product-image"><img src="assets/img/coruja.jpg" height="250px"></div>
+                    <h3 class="product-title">Coruja</h3>
                     <div class="product-price">R$ 12,00</div>
                     <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                  <button  class="buy-button"  onclick="addToCart('Delineador', '12,00', 'assets/img/delineador.png')">COMPRE</button>
+                  <button  class="buy-button"  onclick="addToCart('Coruja', '12,00', 'assets/img/coruja.jpg')">COMPRE</button>
                 </div>
 
                       <!-- Produto 5 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/rimel.png" height="450px"></div>
-                    <h3 class="product-title">Kit Gel de Sobrancelha</h3>
+                    <div class="product-image"><img src="assets/img/hermione.jpg" height="250px"></div>
+                    <h3 class="product-title">Hermione</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Kit Gel de Sobrancelha', '18,00', 'assets/img/rimel.png')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('Hermione', '18,00', 'assets/img/hermione.jpg')">COMPRE</button>
                 </div>
 
                         <!-- Produto 6 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/rimel2.png" height="450px"></div>
-                    <h3 class="product-title">Rímel Volume Máximo</h3>
-                    <div class="product-price">R$ 14,00</div>
-                    <div class="product-installments">2x R$ 7,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Rímel', '14,00', 'assets/img/rimel2.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/Zoro-One Piece.jpg" height="250px"></div>
+                    <h3 class="product-title">Zoro - One Piece</h3>
+                    <div class="product-price">R$ 15,00</div>
+                    <div class="product-installments">2x R$ 7,50 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Zoro - One Piece', '15,00', 'assets/img/Zoro-One Piece.jpg')">COMPRE</button>
                 </div>
 
                 <h3 class="ver-mais"><a href="produtos.html">VEJA MAIS...</a></h3>
@@ -271,13 +270,8 @@
           <div class="footer-column">
             <h3>SOBRE NÓS</h3>
             <p>
-              A marca GB makeUP foi criada por<br />
-              <strong id="rosa">Renata Gabriely e Bruna Elias,</strong><br />
-              profissionais na área da cosmetologia.<br />
-              a idéia inicial era fabricar produtos de alta qualidade<br />
-              e com preços acessíveis, ao mesmo tempo que não machucasse<br />
-              ou danificasse a pele, principalmente quando as<br />
-              peles sensíveis entram no assuno.
+            Aqui cada chaveiro é feito à mão com muito carinho e cuidado, transformando fios em pequenos detalhes cheios de personalidade.
+Nossos chaveiros de crochê são perfeitos para dar um toque fofo ao seu dia a dia, presentear alguém especial ou colecionar.
             </p>
           </div>
 
@@ -316,8 +310,7 @@
           </div>
         </div>
       </footer>
-    </div>
-     <script src="assets/comprar.js"> 
-    </script>
+    </div> 
+        <script src="assets/comprar.js"></script>
   </body>
 </html>

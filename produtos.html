@@ -15,7 +15,7 @@
     <!-- CSS extra para corrigir o carrinho -->
     <style>
      
-      .cart-icon {
+       .cart-icon {
         position: relative;
         cursor: pointer;
         padding: 10px;
@@ -28,15 +28,15 @@
       }
 
           .cart-icon:hover {
-      background-color: rgb(255, 0, 128);
+      background-color: rgb(255, 173, 114);
       }
 
       .cart-count {
         position: absolute;
         top: -5px;
         right: -5px;
-          background-color: rgba(248, 91, 170, 0.633);
-        color: white;
+        background-color: rgb(247, 222, 204);
+        color: rgb(41, 41, 41);
         border-radius: 50%;
         width: 20px;
         height: 20px;
@@ -68,8 +68,7 @@
           </ul>
         </div>
 
-        <div class="div1"><h1>GB</h1></div>
-        <div class="div2"><h2>make UP</h2></div>
+       <div class="div1"><img src="assets/img/logo.png" height="300px"> </div>
 
         <div class="menu">
           <ul>
@@ -94,110 +93,110 @@
             <div class="products-grid">
                 <!-- Produto 1 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/base.png" height="450px"></div>
-                    <h3 class="product-title">Base</h3>
+                    <div class="product-image"><img src="assets/img/Senhora-Aparecida.jpg" height="250px"></div>
+                    <h3 class="product-title">Nossa Senhora Aparecida</h3>
                     <div class="product-price">R$ 20,00</div>
-                    <div class="product-installments">2x R$ 10 (sem juros)</div>
-        <button  class="buy-button"  onclick="addToCart('Base', '20,00', 'assets/img/base.png')">COMPRE</button>
+                    <div class="product-installments">2x R$ 10,00 (sem juros)</div>
+        <button  class="buy-button"  onclick="addToCart('Nossa Senhora Aparecida', '20,00', 'assets/img/Senhora-Aparecida.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 2 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/blush.png" height="410px"></div>
-                    <h3 class="product-title">Blush Compacto</h3>
+                    <div class="product-image"><img src="assets/img/sao-carlos-acutis.jpg" height="250px"></div>
+                    <h3 class="product-title">São Carlos Acutis</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Blush Compacto', '18,00', 'assets/img/blush.png')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('São Carlos Acutis', '18,00', 'assets/img/sao-carlos-acutis.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 3 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/corretivo.png" height="410px"></div>
-                    <h3 class="product-title">Corretivo Líquido</h3>
-                    <div class="product-price">R$ 18,00</div>
-                    <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Corretivo', '18,00', 'assets/img/corretivo.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/ursinha.jpg" height="250px"></div>
+                    <h3 class="product-title">Ursinha</h3>
+                    <div class="product-price">R$ 20,00</div>
+                    <div class="product-installments">2x R$ 10,00 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Ursinha', '20,00', 'assets/img/ursinha.jpg')">COMPRE</button>
                 </div>
 
                 <!-- Produto 4 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/delineador.png" height="350px"></div>
-                    <h3 class="product-title">Caneta Delineadora</h3>
+                    <div class="product-image"><img src="assets/img/coruja.jpg" height="250px"></div>
+                    <h3 class="product-title">Coruja</h3>
                     <div class="product-price">R$ 12,00</div>
                     <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                  <button  class="buy-button"  onclick="addToCart('Delineador', '12,00', 'assets/img/delineador.png')">COMPRE</button>
+                  <button  class="buy-button"  onclick="addToCart('Coruja', '12,00', 'assets/img/coruja.jpg')">COMPRE</button>
                 </div>
 
                       <!-- Produto 5 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/rimel.png" height="450px"></div>
-                    <h3 class="product-title">Kit Gel de Sobrancelha</h3>
+                    <div class="product-image"><img src="assets/img/hermione.jpg" height="250px"></div>
+                    <h3 class="product-title">Hermione</h3>
                     <div class="product-price">R$ 18,00</div>
                     <div class="product-installments">2x R$ 9,00 (sem juros)</div>
-                     <button  class="buy-button"  onclick="addToCart('Kit Gel de Sobrancelha', '18,00', 'assets/img/rimel.png')">COMPRE</button>
+                     <button  class="buy-button"  onclick="addToCart('Hermione', '18,00', 'assets/img/hermione.jpg')">COMPRE</button>
                 </div>
 
                         <!-- Produto 6 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/rimel2.png" height="450px"></div>
-                    <h3 class="product-title">Rímel Volume Máximo</h3>
+                    <div class="product-image"><img src="assets/img/calcifer-casteloAnimado.jpg" height="250px"></div>
+                    <h3 class="product-title">Calcifer - Castelo Animado</h3>
                     <div class="product-price">R$ 14,00</div>
                     <div class="product-installments">2x R$ 7,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Rímel', '14,00', 'assets/img/rimel2.png')">COMPRE</button>
+                    <button  class="buy-button"  onclick="addToCart('Calcifer - Castelo Animado', '14,00', 'assets/img/calcifer-casteloAnimado.jpg')">COMPRE</button>
                 </div>
 
                      <!-- Produto 7 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/gloss.png" height="350px"></div>
-                    <h3 class="product-title">Gloss</h3>
+                    <div class="product-image"><img src="assets/img/ursinho-kimNamjoon.jpg" height="250px"></div>
+                    <h3 class="product-title">Ursinho - Kim Namjoon</h3>
                     <div class="product-price">R$ 12,00</div>
                     <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                  <button  class="buy-button"  onclick="addToCart('Gloss Incolor', '12,00', 'assets/img/gloss.png')">COMPRE</button>
+                  <button  class="buy-button"  onclick="addToCart('Ursinho - kim Namjoon', '12,00', 'assets/img/ursinho-kimNamjoon.jpg')">COMPRE</button>
                 </div>
 
                       <!-- Produto 8 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/hidratante.png" height="380px"></div>
-                    <h3 class="product-title">Contorno em Stick</h3>
+                    <div class="product-image"><img src="assets/img/kim-namjoon.jpg" height="250px"></div>
+                    <h3 class="product-title">Kim Namjoon</h3>
                     <div class="product-price">R$ 15,00</div>
                     <div class="product-installments">2x R$ 7,50 (sem juros)</div>
-                 <button  class="buy-button"  onclick="addToCart('Contorno', '15,00', 'assets/img/hidratante.png')">COMPRE</button>
+                 <button  class="buy-button"  onclick="addToCart('kim Namjoon.jpg', '15,00', 'assets/img/kim-namjoon.jpg')">COMPRE</button>
                 </div>
 
                         <!-- Produto 9 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/hidratanteLabial2.png" height="450px"></div>
-                    <h3 class="product-title">Blush em Stick</h3>
-                    <div class="product-price">R$ 12</div>
+                    <div class="product-image"><img src="assets/img/coelha.jpg" height="250px"></div>
+                    <h3 class="product-title">Coelhinha</h3>
+                    <div class="product-price">R$ 12,00</div>
                     <div class="product-installments">2x R$ 6,00 (sem juros)</div>
-                   <button  class="buy-button"  onclick="addToCart('Blush Stick', '12,00', 'assets/img/hidratanteLabial2.png')">COMPRE</button>
+                   <button  class="buy-button"  onclick="addToCart('Coelha', '12,00', 'assets/img/coelha.jpg')">COMPRE</button>
                 </div>
 
                      <!-- Produto 10 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/po.png" height="350px"></div>
-                    <h3 class="product-title">Pó Solto</h3>
-                    <div class="product-price">R$ 20,00</div>
-                    <div class="product-installments">2x R$ 10,00 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Pó solto', '20,00', 'assets/img/po.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/luffi-onePiece.jpg" height="250px"></div>
+                    <h3 class="product-title">Luffi - One Pieece</h3>
+                    <div class="product-price">R$ 15,00</div>
+                    <div class="product-installments">2x R$ 7,50 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Luffi - One Piece', '15,00', 'assets/img/luffi-onePiece.jpg')">COMPRE</button>
                 </div>
 
                       <!-- Produto 11 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/pinceis.png" height="420px"></div>
-                    <h3 class="product-title">Kit 7 Pincéis</h3>
-                    <div class="product-price">R$ 28,90</div>
-                    <div class="product-installments">3x R$ 9,64 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Kit 7 pincéis', '28,90', 'assets/img/pinceis.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/Zoro-One Piece.jpg" height="250px"></div>
+                    <h3 class="product-title">Zoro - One Piece </h3>
+                    <div class="product-price">R$ 15,00</div>
+                    <div class="product-installments">2x R$ 7,50 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Zoro - One Piece', '15,00', 'assets/img/Zoro-One Piece.jpg')">COMPRE</button>
                 </div>
 
                         <!-- Produto 12 -->
                 <div class="product-card">
-                    <div class="product-image"><img src="assets/img/esponjas.png" height="450px"></div>
-                    <h3 class="product-title">Kit 3 Esponjas</h3>
-                    <div class="product-price">R$ 32,90</div>
-                    <div class="product-installments">3x R$ 10,97 (sem juros)</div>
-                    <button  class="buy-button"  onclick="addToCart('Kit e esponjas', '32,90', 'assets/img/esponjas.png')">COMPRE</button>
+                    <div class="product-image"><img src="assets/img/batman.jpg" height="250px"></div>
+                    <h3 class="product-title">Batman</h3>
+                    <div class="product-price">R$ 15,00</div>
+                    <div class="product-installments">2x R$ 7,50 (sem juros)</div>
+                    <button  class="buy-button"  onclick="addToCart('Batman', '15,00', 'assets/img/batman.jpg')">COMPRE</button>
                 </div>
             </div>
         </div>
@@ -230,49 +229,51 @@
     </div>
 
 
- <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>SOBRE NÓS</h3>
-        <p>
-            A marca GB makeUP foi criada por<br>
-            <strong id="rosa">Renata Gabriely e Bruna Elias,</strong><br>
-            profissionais na área da cosmetologia.<br> a idéia inicial era fabricar
-            produtos de alta qualidade<br> e com preços acessíveis, ao mesmo tempo
-            que não machucasse<br> ou danificasse a pele, principalmente quando as<br>
-            peles sensíveis entram no assuno.
+      <footer class="footer-index">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>SOBRE NÓS</h3>
+            <p>
+            Aqui cada chaveiro é feito à mão com muito carinho e cuidado, transformando fios em pequenos detalhes cheios de personalidade.
+Nossos chaveiros de crochê são perfeitos para dar um toque fofo ao seu dia a dia, presentear alguém especial ou colecionar.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>LINKS</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Promoção</a></li>
+              <li><a href="#">Sobre nós</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>SUPORTE</h3>
+            <ul>
+              <li><a href="#">Perguntas</a></li>
+              <li><a href="#">Contatos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            COPYRIGHT © 2023 <span>ELAVENTA</span> | ELAVENTA BY
+            <span>CATCH THEMES</span>
           </p>
-      </div>
-
-      <div class="footer-column">
-        <h3>LINKS</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Promoção</a></li>
-          <li><a href="#">Sobre nós</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3>SUPORTE</h3>
-        <ul>
-          <li><a href="#">Perguntas</a></li>
-          <li><a href="#">Contatos</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>COPYRIGHT © 2023 <span>ELAVENTA</span> | ELAVENTA BY <span>CATCH THEMES</span></p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/_gabrielyy8/?igsh=MW4ydHVkNnQ5N215bA%3D%3D#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a
+              href="https://www.instagram.com/_gabrielyy8/?igsh=MW4ydHVkNnQ5N215bA%3D%3D#"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
   <script src="assets/comprar.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ body{
 }
 
 .estou-aqui{
-  color: hotpink;
+  color: rgb(233, 186, 153);;
 }
 
 a {
@@ -71,7 +71,7 @@ aside {
   display: flex;
   justify-content: center;
   
-  background-color: hotpink;
+  background-color: rgb(251, 230, 215);
 }
 
 .sidebar1 .promo-img{
@@ -84,7 +84,7 @@ aside {
   display: flex;
   justify-content: center;
   
-  background-color: hotpink;
+background-color: rgb(251, 230, 215);
 }
 
 .main-content-index {
@@ -129,17 +129,25 @@ aside {
 }
 
 .div-header .login-button{
-  background-color: rgba(255, 105, 180, 0.414);
+background-color: rgb(251, 230, 215);
+}
+
+.div-header .login-button{
+  color: rgb(88, 88, 88);
 }
 
 .div-header .login-button:hover{
-  background-color: hotpink;
+  background-color: rgb(241, 181, 139);
 }
 
 .grid-de-cabecalho .div1 {
   grid-column: meio1/meio2;
   grid-row: 2/3;
   margin-top: 4%;
+}
+
+.grid-de-cabecalho .div1 img{
+  margin-top: 6%;
 }
 
 .grid-de-cabecalho .div2 {
@@ -190,15 +198,15 @@ li a{
 
 
 li a:hover {
-  background-color: hotpink;
-  color: #ffffff;
+    background-color: rgb(251, 230, 215);
+  color: #313131;
 }
 
 
 header.rolar {
   background-color: white;
   box-shadow: 0px 0px 10px;
-  height: 85px;
+  height: 100px;
 }
 
 header.rolar h1 {
@@ -264,7 +272,7 @@ Aside
 
 .slide-manu .manu-btn,
 .slide-auto div {
-  border: 3px solid #ff0054;
+  border: 3px solid rgb(255, 200, 161);
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -277,13 +285,13 @@ Aside
 }
 
 .slide-manu .manu-btn:hover {
-  background-color: #ff0054;
+  background-color: rgb(255, 200, 161);
 }
 
 #radio1:checked ~ .slide-auto .auto-btn1,
 #radio2:checked ~ .slide-auto .auto-btn2,
 #radio3:checked ~ .slide-auto .auto-btn3 {
-  background-color: #ff0054;
+  background-color: rgb(255, 200, 161);
 }
 
 #radio1:checked ~ .primeiro {
@@ -334,7 +342,7 @@ main button:hover{
 */
 
 .sidebar1 .promo-img {
-  background-image: url(./img/Black.jpg);
+  background-image: url(./img/hermione.jpg);
   background-size: cover;
   height: 400px;
   width: 50%;
@@ -468,8 +476,8 @@ FOOTER
 }
 
 .social-icons a:hover {
-  background-color: hotpink;
-  color: white;
+ background-color: rgb(248, 190, 149);
+  color: rgb(39, 39, 39);
 }
 
 
@@ -501,7 +509,7 @@ FOOTER
   grid-column: 1/-1;
   grid-row: 1;
   height: 659px;
-  background-image: url(./img/fundo.jpg);
+  background-image: url(./img/slide1.png);
   background-size: 100%;
   background-repeat: no-repeat;
   justify-content: center;
@@ -528,7 +536,7 @@ margin-top: 45%;
 }
 
 .make a{
-  color: palevioletred;
+  color: rgb(34, 33, 33);
 }
 
 .make h5{
@@ -563,7 +571,7 @@ margin-top: 45%;
   display: inline-block;
   font-size: 0.9rem;
   color: honeydew; /* verde */
-  background: hotpink; /* verde claro */
+  background: rgb(255, 200, 161); /* verde claro */
   padding: 4px 8px;
   border-radius: 20px;
   font-weight: 500;
@@ -602,7 +610,7 @@ margin-top: 45%;
 .img-contatos{
    grid-column: 1/-1;
    grid-row: 1;
-  background-image: url(./img/fundo2.jpg);
+  background-image: url(./img/slide1.png);
 }
 
 .contatos-gb{
@@ -634,7 +642,7 @@ margin-top: 45%;
   border-radius: 12px;
   padding: 10px;
   gap: 15px;
-  border: 2px solid hotpink;
+  border: 2px solid rgb(255, 200, 161);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-top: 18%;
 }
@@ -657,7 +665,7 @@ margin-top: 45%;
 .contatos-gb h6 span {
   display: block;
   font-size: 12px;
-  color: hotpink;
+  color: rgb(247, 222, 204);
   font-weight: bold;
 }
 
@@ -669,7 +677,7 @@ margin-top: 45%;
    max-width: 500px;
   margin: 50px auto;
   padding: 30px;
-  background: linear-gradient(145deg, #ffe4f0, #ffd6ea);
+  background: linear-gradient(145deg, rgb(247, 222, 204), rgb(255, 200, 161));
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
   height: 650px; /* altura maior */
@@ -686,7 +694,7 @@ margin-top: 45%;
 
 .formulario-gb h2 {
   text-align: center;
-  color: hotpink;
+  color: rgb(255, 178, 123);
   margin-bottom: 20px;
 }
 
@@ -698,13 +706,13 @@ margin-top: 45%;
 
 label {
   font-weight: bold;
-  color: hotpink;
+  color: rgb(250, 179, 128);
   margin-bottom: 5px;
 }
 
 input, textarea {
   padding: 12px;
-  border: 2px solid hotpink;
+  border: 2px solid rgb(255, 200, 161);
   border-radius: 8px;
   outline: none;
   font-size: 16px;
@@ -712,7 +720,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: deeppink;
+  border-color: rgb(255, 200, 161);
   box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
 }
 
@@ -722,7 +730,7 @@ textarea {
 }
 
 button.orange-button {
-  background: hotpink;
+  background: rgb(242, 182, 140);
   color: white;
   font-size: 18px;
   padding: 12px;
@@ -733,7 +741,7 @@ button.orange-button {
 }
 
 button.orange-button:hover {
-  background: deeppink;
+  background: rgb(215, 165, 128);
 }
 
 .footer-contatos{
@@ -758,7 +766,7 @@ margin-bottom: 5%;
 */
 
 .comprar-produtos{
-  background-image: url(img/fundo2.jpg);
+  background-image: url(img/slide1.png);
   background-repeat: no-repeat;
   height: 400px;
 }
@@ -833,8 +841,8 @@ margin-bottom: 5%;
         .buy-button {
             width: 100%;
             padding: 12px;
-            background-color: hotpink;
-            color: white;
+           background-color: rgb(251, 230, 215);
+           color: rgb(88, 88, 88);
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -846,7 +854,7 @@ margin-bottom: 5%;
         }
 
         .buy-button:hover {
-            background-color: rgb(254, 0, 127);
+          background-color: rgb(246, 198, 164);
         }
 
         /* Sidebar Cart */

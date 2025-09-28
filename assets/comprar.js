@@ -1,6 +1,6 @@
 // Carrinho mais robusto
 (() => {
-  let cart = [];
+  let cart = []; // Variável 'cart' inicializada.
 
   // Utilidades
   const $ = (sel) => document.querySelector(sel);
@@ -20,29 +20,58 @@
     icon: $('.cart-icon'),
   };
 
-  // ==== Ações do carrinho ====
-function addToCart(name, price, image) {
-  const p = toNumber(price);
-  const existing = cart.find((i) => i.name === name);
+  // ==== Funções de Persistência (LocalStorage) ====
 
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({
-      name,
-      price: p,
-      quantity: 1,
-      image: image // 👉 guarda a imagem
-    });
+  /**
+   * Salva o estado atual do carrinho no LocalStorage.
+   */
+  function saveCart() {
+    try {
+      localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    } catch (e) {
+      console.error('Erro ao salvar o carrinho no LocalStorage:', e);
+    }
   }
 
-  updateCartUI();
-  showAddedToCartAnimation();
-}
+  /**
+   * Carrega o estado do carrinho do LocalStorage.
+   * Retorna um array vazio se não houver dados.
+   */
+  function loadCart() {
+    try {
+      const storedCart = localStorage.getItem('shoppingCart');
+      return storedCart ? JSON.parse(storedCart) : [];
+    } catch (e) {
+      console.error('Erro ao carregar o carrinho do LocalStorage:', e);
+      return [];
+    }
+  }
+
+  // ==== Ações do carrinho ====
+  function addToCart(name, price, image) {
+    const p = toNumber(price);
+    const existing = cart.find((i) => i.name === name);
+
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({
+        name,
+        price: p,
+        quantity: 1,
+        image: image 
+      });
+    }
+
+    saveCart(); // 👈 Salva após adicionar
+    updateCartUI();
+    showAddedToCartAnimation();
+  }
 
   function removeFromCart(index) {
     if (index >= 0 && index < cart.length) {
       cart.splice(index, 1);
+      saveCart(); // 👈 Salva após remover
       updateCartUI();
     }
   }
@@ -50,11 +79,14 @@ function addToCart(name, price, image) {
   function updateQuantity(index, newQuantity) {
     if (index < 0 || index >= cart.length) return;
     const q = Number(newQuantity);
+    
     if (!Number.isFinite(q) || q <= 0) {
-      removeFromCart(index);
+      removeFromCart(index); // removeFromCart já chama saveCart()
       return;
     }
+    
     cart[index].quantity = q;
+    saveCart(); // 👈 Salva após atualizar
     updateCartUI();
   }
 
@@ -74,29 +106,27 @@ function addToCart(name, price, image) {
         </div>
       `;
     } else {
-      cartItems.innerHTML = cart
-  .map(
-    (item, index) => `
-      <div class="cart-item">
-        <div class="cart-item-image">
-          <img src="${item.image}" alt="${item.name}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;" />
-        </div>
-        <div class="cart-item-info">
-          <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-price">${brl(item.price)}</div>
-          <div class="quantity-controls">
-            <button onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
-            <span>${item.quantity}</span>
-            <button onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
-             </div>
-              <button class="remove-btn" onclick="removeFromCart(${index})">Remover</button>
+      els.items.innerHTML = cart
+        .map(
+          (item, index) => `
+            <div class="cart-item">
+              <div class="cart-item-image">
+                <img src="${item.image}" alt="${item.name}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;" />
+              </div>
+              <div class="cart-item-info">
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-price">${brl(item.price)}</div>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+                  <span>${item.quantity}</span>
+                  <button onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+                </div>
+                <button class="remove-btn" onclick="removeFromCart(${index})">Remover</button>
+              </div>
             </div>
-          </div>
-      </div>
-    `
-  )
-  .join('');
-
+          `
+        )
+        .join('');
     }
 
     // Total
@@ -127,6 +157,7 @@ function addToCart(name, price, image) {
     alert(`Finalizando compra!\n\nItens:\n${itemsList}\n\nTotal: ${brl(total)}\n\nObrigado pela preferência!`);
 
     cart = [];
+    saveCart(); // 👈 Salva o carrinho vazio
     updateCartUI();
     closeCart();
   }
@@ -153,6 +184,7 @@ function addToCart(name, price, image) {
   window.openCart = openCart;
   window.closeCart = closeCart;
 
-  // Inicializa
+  // 🚀 Inicializa carregando o estado salvo
+  cart = loadCart();
   updateCartUI();
 })();
